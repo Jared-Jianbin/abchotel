@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif, 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 1.6;
+    text-shadow: 0 0 5px 0 rgba(#000, .2);
+    color: #4B5D67;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: 0 0 5px 0 rgba(#000, .2);
+    color: #4B5D67;
+}
+
+img {
+    width: min(100%, 1000px);
+    height: min(100%, 1000px);
+}
+
+.section-title {
+    font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+    // margin: 7rem 1rem 0;
+}
+
+.spacing > * + * {
+    margin-top: 1em;
+}
+
+.booking-link {
+    text-decoration: none;
+    cursor: point;
+    font-size: 1.125rem;
+
+    &::after {
+        content: "   >";
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    background-image: url(../img/beach-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .header-content {
+        width: 80%;
+        height: 50%;
+    }
+
+    h1 {
+        font-family: 'Mountains of Christmas', cursive;
+        font-size: clamp(4rem, calc(5vw + 1rem), 7rem),
+            -ms-clamp(4rem, calc(5vw + 1rem), 7rem);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: clamp(1.125rem, calc(5vw + 1rem), 1.25rem);
+    }   
+}
+
+.seasonal-special {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: #F6FBF4;
+    display: flex;
+    flex-direction: column;
+
+    .special-deal-content div > * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    p {
+        color: #8e8e8e;
+    }     
+
+    a {
+        font-weight: 500;
+        font-size: clamp(1.125rem, calc(5vw + 1rem), 1.25rem);
+    }
+
+    @media (min-width: 73rem) {
+        flex-direction: row;
+        padding: 10rem 10%;
+
+        .special-deal-content {
+            flex-basis: 40%;
+            text-align: left;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .carousel {
+            flex-basis: 60%;
+        }
+    }
+}
+
+.booking {
+    padding: 10rem 2rem 2rem 2rem;
+    text-align: center;
+    background: radial-gradient(#B9F8D3, #FFD59E);
+
+
+    .room-category {
+        width: min(100%, 1200px);
+        margin: 5rem auto;
+    }
+
+    &__detail > * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, calc(5vw + 1rem), 1.725rem);
+    }
+
+    @media (min-width: 73rem) {
+        .room-category {
+            display: flex;
+            width: 80%;
+        }
+
+        &__detail {
+            flex-basis: 40%;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        img {
+            flex-basis: 60%;
+        }
+        
+    }
+
+}
+
+footer {
+    color: #8e8e8e;
+    padding: 5rem 2rem 0 2rem;
+    text-align: center;
+
+    a + a {
+        margin-left: 1rem;
+    }
+    
+    address > * {
+        margin: 0 auto;
+    }
+
+    .contact {
+        margin: 1rem auto;
+    }
+
+    @media (min-width: 73rem) {
+        .contact {
+            display: flex;
+            justify-content: center;
+
+            > * {
+                width: 300px;
+            }
+
+            div {
+                display: flex;
+                align-items: center;   
+            }
+        }
+    }
+}
